@@ -1,0 +1,15 @@
+-- List the department number for each employee along 
+-- with that employee’s employee number, last name, first name, and department name.
+
+SELECT
+  d.dept_no,
+  e.emp_no,
+  e.last_name,
+  e.first_name,
+  de.dept_name
+FROM
+  dept_emp AS d
+JOIN 
+  employees AS e ON d.emp_no = e.emp_no
+JOIN 
+  departments AS de ON de.dept_no = d.dept_no;
